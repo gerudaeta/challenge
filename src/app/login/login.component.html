@@ -1,0 +1,38 @@
+<div class="container-fuild">
+  <!-- Content here -->
+  <div class="row d-flex align-items-center justify-content-center">
+    <div id="login" class="col-lg-4 col-md-6 col-12">
+      <img class="img-fluid mx-auto d-block rounded"
+           src="assets/LOGO1.png" />
+      <form [formGroup]="signinForm" (ngSubmit)="signin()">
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo"
+                 [formControl]="signinForm.controls['email']"
+                 value=""
+                 class="form-control" type="email"
+                 autocomplete="false"
+                 placeholder="Correo electrónico">
+        </div>
+        <div class="form-group">
+          <label for="palabraSecreta">Contraseña</label>
+          <input id="palabraSecreta" name="palabraSecreta"
+                 class="form-control" type="password"
+                 autocomplete="false"
+                 [formControl]="signinForm.controls['password']"
+                 value=""
+                 placeholder="Contraseña">
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary mb-2" [disabled]="signinForm.invalid">
+              Entrar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>

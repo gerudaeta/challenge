@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mt-4" *ngFor="let sitio of sitios">
+      <div class="card">
+        <img [src]="sitio.url_imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ sitio.nombre }}</h5>
+          <p class="card-text">{{ sitio.descripcion }}</p>
+          <p class="card-text"><small class="text-muted">Coordenadas Geograficas: {{ sitio.ubicacion._lat }} - {{ sitio.ubicacion._long}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
